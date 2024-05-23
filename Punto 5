@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class Punto5 {
+public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+System.out.print("Introduce el primer número: ");
+double num1 = scanner.nextDouble();
+System.out.print("Introduce el segundo número: ");
+double num2 = scanner.nextDouble();
+System.out.print("Introduce una operación (+, -, *, /): ");
+char operator = scanner.next().charAt(0);
+double result;
+switch (operator) {
+case '+':
+result = num1 + num2;
+break;
+case '-':
+result = num1 - num2;
+break;
+case '*':
+result = num1 * num2;
+break;
+case '/':
+if (num2 != 0) {
+result = num1 / num2;
+} else {
+System.out.println("Error: División por cero no permitida.");
+return;
+}
+break;
+default:
+System.out.println("Operador no válido.");
+return;
+}
+System.out.println("El resultado es: " + result);
+scanner.close();
+}
+}
