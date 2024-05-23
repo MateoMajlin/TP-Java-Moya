@@ -1,0 +1,23 @@
+public class Punto2 {
+public static void main(String[] args) {
+for (int i = 50; i < 101; i++) {
+int cont = 0;
+for (int num = 1; num <= i; num++) {
+if (i % num == 0) {
+cont++;
+}
+}
+if (cont == 2) {
+System.out.println(i + " es Primo");
+} else {
+System.out.print(i + " no es Primo. Sus divisores son: ");
+for (int num = 1; num <= i; num++) {
+if (i % num == 0) {
+System.out.print(num + " ");
+}
+}
+System.out.println();
+}
+}
+}
+}
