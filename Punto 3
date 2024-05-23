@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class NumberInput {
+public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+int number = 0;
+while (true) {
+System.out.println("Introduce un número: ");
+number = scanner.nextInt();
+if (number > 100 && isPrime(number)) {
+System.out.println("El número " + number + " es mayor que 100 y es primo.");
+break;
+} else {
+System.out.println("El número " + number + " no cumple las condiciones.");
+}
+}
+scanner.close();
+}
+public static boolean isPrime(int num) {
+if (num <= 1) {
+return false;
+}
+for (int i = 2; i <= Math.sqrt(num); i++) {
+if (num % i == 0) {
+return false;
+}
+}
+return true;
+}
+}
